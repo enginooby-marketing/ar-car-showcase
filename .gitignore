@@ -72,3 +72,9 @@ crashlytics-build.properties
 
 # REWIRED
 Assets/Plugins/Rewired/Internal/Assets
+
+# Realistic Car Controller
+Assets/Asset Packs/Model/RealisticCarControllerV3/Demo Scenes
+Assets/Asset Packs/Model/RealisticCarControllerV3/Addon Packages
+
+
