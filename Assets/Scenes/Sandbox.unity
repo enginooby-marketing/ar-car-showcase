@@ -1219,6 +1219,9 @@ MonoBehaviour:
     controllerMapEnablerSetIdCounter: 0
   _controllerDataFiles: {fileID: 11400000, guid: d21d2b20df8369642b76aafbb2576ba7,
     type: 2}
+  isCompiling: 0
+  _isAwake: 1
+  ignoreRecompile: 0
 --- !u!4 &2119717099
 Transform:
   m_ObjectHideFlags: 0
@@ -1240,6 +1243,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1596710325, guid: 110f1808d18909b47ab6d296938fbc7a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6777203157788915338, guid: 110f1808d18909b47ab6d296938fbc7a,
         type: 3}
       propertyPath: m_RootOrder
@@ -1295,6 +1302,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6777203157788915343, guid: 110f1808d18909b47ab6d296938fbc7a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6777203157788915575, guid: 110f1808d18909b47ab6d296938fbc7a,
         type: 3}
       propertyPath: m_Name
@@ -1305,7 +1317,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1596710325, guid: 110f1808d18909b47ab6d296938fbc7a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 110f1808d18909b47ab6d296938fbc7a, type: 3}
 --- !u!1001 &6129568236998756552
 PrefabInstance:
