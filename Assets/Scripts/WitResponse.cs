@@ -1,6 +1,7 @@
 using System.Collections.Generic;
-using System;
 using Newtonsoft.Json.Serialization;
+using Newtonsoft.Json;
+
 
 // classes converted from JSON responses
 
@@ -21,7 +22,7 @@ public class DoorEntity
 
 public class Entities
 {
-    // [JsonPropertyName("door:entity")]
+    [JsonProperty("door:entity")]
     public List<DoorEntity> DoorEntity { get; set; }
 }
 

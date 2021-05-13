@@ -1,37 +1,36 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.UI;
-using System.Collections.Generic;
-using System;
 using TMPro;
 using Newtonsoft.Json;
 
 public partial class Wit3D : MonoBehaviour
 {
     public TextMeshProUGUI HandleLabel;
+    public Animator animator;
 
-    void HandleWitResponse(string jsonString)
+    private void HandleWitResponse(string jsonString)
     {
         if (jsonString != null)
         {
-            // ResponseObject responseObject = JsonUtility.FromJson<ResponseObject>(jsonString);
-            // ResponseObject responseObject = new ResponseObject();
-            Root responseObject = JsonConvert.DeserializeObject<Root>(jsonString);
-            // JsonConvert.PopulateObject(jsonString, responseObject);
-            print(responseObject.text);
-            // print(responseObject.entities.entityItems[0].name);
 
-            // if (responseObject.entities.entity != null)
-            // {
-            //     foreach (EntityItem entityItem in responseObject.entities.entity.entityItems)
-            //     {
-            //         Debug.Log(entityItem.confidence);
-            //         HandleLabel.text = entityItem.name;
-            //         commandValid = true;
-            //     }
-            // }
+            Root responseObject = JsonConvert.DeserializeObject<Root>(jsonString);
+
+            if (responseObject.entities.DoorEntity == null || responseObject.intents == null)
+            {
+                HandleLabel.text = "Invalid command";
+            }
+            else
+            {
+                string action = responseObject.intents[0].name;
+                string entity = responseObject.entities.DoorEntity[0].name;
+                HandleLabel.text = "Action: " + action + " - Entity: " + entity;
+                ExecuteCommand(action, entity);
+            }
         }
 
     }
 
+    private void ExecuteCommand(string action, string entity)
+    {
+        animator.SetTrigger(action + "-" + entity);
+    }
 }

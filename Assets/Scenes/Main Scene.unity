@@ -125,6 +125,35 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!21 &58195959
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'book1Material
+
+    29244'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 14d859b928a646fd9e478566dfab7d87, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &272045115
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,6 +874,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114943230438321762, guid: 752319cdcc7245e42a55cac8bfc8fd4b,
         type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1654615835}
+    - target: {fileID: 114943230438321762, guid: 752319cdcc7245e42a55cac8bfc8fd4b,
+        type: 3}
       propertyPath: HandleLabel
       value: 
       objectReference: {fileID: 2128093130}
@@ -1163,7 +1197,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1851653966}
+  - {fileID: 58195959}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1543,6 +1577,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5086e9012e8a8144ea03d3ed28aef23a, type: 3}
+--- !u!95 &1654615835 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 408628150611672277, guid: c8b4ec5ae9d2681499fb60ce83d7ed38,
+    type: 3}
+  m_PrefabInstance: {fileID: 1171010704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1810479668
 Mesh:
   m_ObjectHideFlags: 0
@@ -1707,35 +1747,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!21 &1851653966
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'book1Material
-
-    29276'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 14d859b928a646fd9e478566dfab7d87, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1001 &1858785358
 PrefabInstance:
   m_ObjectHideFlags: 0
