@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RendererFeatures:
   - {fileID: 3075354231182545811}
-  - {fileID: 6649408177303102393}
   - {fileID: 733416281454808313}
-  m_RendererFeatureMap: 9353211c61daad2ab9a3bad68171475cf90c9ae0389e2d0a
+  m_RendererFeatureMap: 9353211c61daad2af90c9ae0389e2d0a
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
@@ -69,7 +68,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7cbabd8e2cb2e4f8a930752453adf79a, type: 3}
-  m_Name: MyForwardRenderer
+  m_Name: Beautify
   m_EditorClassIdentifier: 
   m_Active: 1
   shader: {fileID: 4800000, guid: 55d70ca4ea7504a38b66170bbe587b2f, type: 3}

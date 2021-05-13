@@ -1,12 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class CarSwitcher : MonoBehaviour
 {
     List<GameObject> cars;
-    int currentCarId;
-
     void Start()
     {
         PopulateCarList();
@@ -20,20 +17,20 @@ public class CarSwitcher : MonoBehaviour
             cars.Add(child.gameObject);
             child.gameObject.SetActive(false);
         }
-        cars[currentCarId].SetActive(true);
+        cars[AppController.Instance.currentCarId].SetActive(true);
     }
 
     public void SwitchLeft()
     {
-        cars[currentCarId].SetActive(false);
-        currentCarId = (currentCarId == 0) ? cars.Count - 1 : currentCarId - 1;
-        cars[currentCarId].SetActive(true);
+        cars[AppController.Instance.currentCarId].SetActive(false);
+        AppController.Instance.currentCarId = (AppController.Instance.currentCarId == 0) ? cars.Count - 1 : AppController.Instance.currentCarId - 1;
+        cars[AppController.Instance.currentCarId].SetActive(true);
     }
 
     public void SwitchRight()
     {
-        cars[currentCarId].SetActive(false);
-        currentCarId = (currentCarId == cars.Count - 1) ? 0 : currentCarId + 1;
-        cars[currentCarId].SetActive(true);
+        cars[AppController.Instance.currentCarId].SetActive(false);
+        AppController.Instance.currentCarId = (AppController.Instance.currentCarId == cars.Count - 1) ? 0 : AppController.Instance.currentCarId + 1;
+        cars[AppController.Instance.currentCarId].SetActive(true);
     }
 }
